@@ -83,6 +83,11 @@ submitForm.addEventListener('submit', (async (e) => {
         })
         let data = result.data.rows
         buildTable(data)
+        alert("Запись добавлена")
+        let inputs = document.querySelectorAll('#eventForm input')
+        for(input of inputs){
+            input.value = ""
+        }
     }
     catch (e) {
         alert("Проверьте поля ввода")

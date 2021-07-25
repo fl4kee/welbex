@@ -111,10 +111,19 @@ td {
 
 
 @media (min-width: 1916px){
-    #table{
-        width: 70%;
-    }
     #eventForm, #filterForm{
         width: 65%;
+    }
+}
+@media (max-width: 1350px){
+    #eventForm input, #filterForm input{
+        width: 140px;
+        margin-left: 10px;
+    }
+    #filterForm label{
+        display: none;
+    }
+    #filterForm div{
+        margin-left: 20px;
     }
 }
