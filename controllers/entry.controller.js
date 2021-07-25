@@ -37,9 +37,15 @@ class entryController{
     }
 
     async showTable(req, res){
-        const data = await db.query("SELECT * FROM welbext")
-        convertTime(data)
-        res.json(data)
+        try{   
+            const data = await db.query("SELECT * FROM welbext")
+            convertTime(data)
+            res.json(data)
+        }
+        
+        catch(e){
+            res.status(400).send()
+        }
     }
     
 

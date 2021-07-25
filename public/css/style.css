@@ -1,35 +1,115 @@
-h1{
-    text-align: center;
-}
-#table-container{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+	margin: 0;
+	font-family: "Rubik", sans-serif;
+	background-color: #fffdf7;
+	color: #1d3557;
+	min-height: 100vh;
 }
 
-#table tr, th, td{
-    text-align: center;
-    padding: 10px 0;
-    border-bottom: 1px solid;
-    margin: 0;
-    
+#eventForm, #filterForm{
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-#table{
+
+input,
+select,
+.page {
+	border-radius: 5px;
+}
+
+section {
+	padding-top: 50px;
     width: 70%;
-    margin-top: 15px;;
+    margin: 0 auto
 }
-.button{
-    text-decoration: none;
-    padding: 13px 16px;
-    border: 1px solid;
-    border-radius: 10px;
-    transition-duration: 0.3s;
+h1 {
+	margin: 0;
+	padding: 15px;
+	text-align: center;
 }
-.button:hover{
-    background-color:black;
-    color:white;
+h2 {
+	margin: 50px auto 0;
 }
-#pagination-wrapper{
-    margin-top: 10px;
+#table-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.2em;
+}
+td {
+	width: 25%;
+}
+select {
+	padding: 2px;
+}
+
+
+#filterForm label {
+	margin-left: 25px;
+}
+label {
+	margin-left: 10px;
+}
+input {
+	width: 80px;
+}
+
+#table tr,
+th,
+td {
+	text-align: center;
+	padding: 18px 0;
+	border-bottom: 1px solid;
+	margin: 0;
+}
+
+#table {
+	margin-top: 15px;
+}
+
+#pagination-wrapper {
+	margin-top: 20px;
+}
+
+.submit-button {
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+		0 1px 2px rgba(0, 0, 0, 0.08);
+	color: #fff;
+	width: 100px;
+	text-align: center;
+	font-size: 14px;
+	padding: 8px 16px;
+	margin: 20px 5px;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: background-color 0.1s linear;
+}
+.submit-button {
+	background-color: #6798c0;
+	border: 1px solid #6798c0;
+}
+
+.submit-button:hover {
+	background-color: #114b5f;
+}
+.page {
+	background-color: #fffdf7;
+	color: #1d3557;
+	margin-right: 3px;
+	padding: 8px 10px;
+}
+
+.page:hover:not(.active) {
+	background-color: #1d3557;
+	color: #f1faee;
+}
+
+
+@media (min-width: 1916px){
+    #eventForm, #filterForm{
+        width: 65%;
+    }
 }

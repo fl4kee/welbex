@@ -4,7 +4,7 @@ let tbody = document.querySelector('tbody')
 
 let state = {
     'page': 1,
-    'rows': 6,
+    'rows': 8,
 }
 
 const pagination = (result, page, rows) => {

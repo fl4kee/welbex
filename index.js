@@ -1,8 +1,6 @@
 const express = require('express');
-const moment = require('moment')
 const entryRouter = require('./routes/entry.routes');
 const path = require('path');
-const db = require('./db');
 const app = express()
 
 

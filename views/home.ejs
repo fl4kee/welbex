@@ -6,27 +6,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Таблица</h1>
 		<section id="table-container">
+			<h1>Таблица</h1>
 			<form action="#" method="POST" id="filterForm">
-				<label for="column">Колонка</label>
-				<select name="column" id="column">
-					<option value="title">Название</option>
-					<option value="qty">Количество</option>
-					<option value="distance">Расстояние</option>
-				</select>
-				<label for="condition">Условие</label>
-				<select name="condition" id="condition">
-					<option value="like">Содержит</option>
-					<option value=">">Больше</option>
-					<option value="=">Равно</option>
-					<option value="<">Меньше</option>
-				</select>
-				<label for="value">Значение для фильтрации</label>
-				<input type="text" id="value" name="value" />
-				<button type="submit">Фильтр</button>
+				<div>
+					<label for="column">Колонка</label>
+					<select name="column" id="column">
+						<option value="title">Название</option>
+						<option value="qty">Количество</option>
+						<option value="distance">Расстояние</option>
+					</select>
+				</div>
+				<div>
+					<label for="condition">Условие</label>
+					<select name="condition" id="condition">
+						<option value="like">Содержит</option>
+						<option value=">">Больше</option>
+						<option value="=">Равно</option>
+						<option value="<">Меньше</option>
+					</select>
+				</div>
+				<div>
+					<label for="value">Значение для фильтрации</label>
+					<input type="text" id="value" name="value" />
+				</div>
+				<button type="submit" class="submit-button">Фильтр</button>
 			</form>
 			<table id="table" cellspacing="0">
 				<thead>
@@ -37,21 +49,28 @@
 						<th>Расстояние</th>
 					</tr>
 				</thead>
-				<tbody>
-			    </tbody>
+				<tbody></tbody>
 			</table>
 			<div id="pagination-wrapper"></div>
 			<h2>Добавить запись</h2>
 			<form action="#" id="eventForm" method="POST">
-				<label for="date">Дата</label>
-				<input type="text" id="date" name="date_" placeholder="ДД.ММ.ГГГГ" />
-				<label for="title">Название</label>
-				<input type="text" id="title" name="title" />
-				<label for="qty">Количество</label>
-				<input type="number" id="qty" min="0" name="qty" />
-				<label for="distance">Расстояние</label>
-				<input type="number" id="distance" min="0" name="distance" />
-				<button>Добавить</button>
+				<div>
+					<label for="date">Дата</label>
+					<input type="text" id="date" name="date_" placeholder="дд.мм.гггг" />
+				</div>
+				<div>
+					<label for="title">Название</label>
+					<input type="text" id="title" name="title" />
+				</div>
+				<div>
+					<label for="qty">Количество</label>
+					<input type="number" id="qty" min="0" name="qty" />
+				</div>
+				<div>
+					<label for="distance">Расстояние</label>
+					<input type="number" id="distance" min="0" name="distance" />
+				</div>
+				<button class="submit-button">Добавить</button>
 			</form>
 		</section>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
