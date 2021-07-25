@@ -56,6 +56,10 @@ input {
 	width: 80px;
 }
 
+#table {
+	margin-top: 15px;
+    width: 100%;
+}
 #table tr,
 th,
 td {
@@ -65,9 +69,7 @@ td {
 	margin: 0;
 }
 
-#table {
-	margin-top: 15px;
-}
+
 
 #pagination-wrapper {
 	margin-top: 20px;
@@ -109,6 +111,9 @@ td {
 
 
 @media (min-width: 1916px){
+    #table{
+        width: 70%;
+    }
     #eventForm, #filterForm{
         width: 65%;
     }
