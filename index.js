@@ -17,6 +17,9 @@ app.use('/api', entryRouter)
 app.get('/', (async (req, res) => {
     res.render('home')
 }))
+app.all('*', (req, res) =>{
+    res.status(404).send('Такой страницы нет')
+})
 
 
 app.listen(3000, () => {
